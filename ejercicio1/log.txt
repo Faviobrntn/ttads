@@ -1,0 +1,15 @@
+3/4/2019 20:28:01 - Status: 200 - /consigna.txt
+3/4/2019 20:28:01 - Status: 400 - /favicon.ico
+3/4/2019 20:28:02 - Status: 200 - /consigna.txt
+3/4/2019 20:31:19 - Status: 403 - /log.txt
+3/4/2019 20:31:19 - Status: 400 - /favicon.ico
+3/4/2019 20:31:20 - Status: 403 - /log.txt
+3/4/2019 20:31:20 - Status: 400 - /favicon.ico
+3/4/2019 20:31:20 - Status: 403 - /log.txt
+3/4/2019 20:31:21 - Status: 400 - /favicon.ico
+3/4/2019 20:31:21 - Status: 403 - /log.txt
+3/4/2019 20:31:21 - Status: 400 - /favicon.ico
+3/4/2019 20:31:25 - Status: 200 - /consigna.txt
+3/4/2019 20:31:26 - Status: 400 - /favicon.ico
+3/4/2019 20:34:32 - Status: 403 - /log.txt
+3/4/2019 20:34:32 - Status: 400 - /favicon.ico

@@ -1,0 +1,9 @@
+github.com/utnfrrottads
+
+Consigna: 
+	Hacer un web server que:
+		1. devuelva el contenido de cualquier file local (mismo dir o subdir) que la URL solicitada
+		2. Lleve un LOG de requests y es status de la respuesta con fecha y hora
+		3. Devuelva un status 200(OK) si el file existe y 404(not found) si no existe.
+		4. Si hay un request del log, falle con status 403 (forbidden)
+

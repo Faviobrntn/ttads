@@ -1,0 +1,19 @@
+{
+  "name": "web_server",
+  "version": "1.0.0",
+  "description": "ejemplos y ejercicios de node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faviobrntn/ttads.git"
+  },
+  "author": "favio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faviobrntn/ttads/issues"
+  },
+  "homepage": "https://github.com/Faviobrntn/ttads#readme"
+}
