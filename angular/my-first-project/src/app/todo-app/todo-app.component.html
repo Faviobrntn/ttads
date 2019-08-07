@@ -1,0 +1,14 @@
+<div class="todo-list-input">
+    <input type="text" [(ngModel)]="currentItem.description">
+    <button (click)=addItem()>+</button>
+</div>
+
+<div class="todo-list-items">
+	<ul>
+		<li *ngFor="let item of items let i = index" [class.js-done]="item.done">
+			<b>{{item.date}}</b> - {{item.description}}
+			<input type="checkbox" [(ngModel)]="item.done">
+			<button (click)=removeItem(i) [class.ocultar]="item.done"> X </button>
+		</li>
+	</ul>
+</div>

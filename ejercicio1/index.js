@@ -22,7 +22,7 @@ http.createServer((req, res) => {
                 let log = fecha + " - Status: 400 - " + req.url + "\n";
                 fs.writeFile('log.txt', log, {encoding: 'utf8', flag: 'a'}, (error) => {
                     if (error) throw error; 
-                    console.log('The file has been saved!');
+                    console.log('El archivo ha sido guardado!');
                     
                     res.writeHead(400, {'Content-Type': 'text/plain'});
                     res.end(err.Error);
@@ -31,7 +31,7 @@ http.createServer((req, res) => {
                 let log = fecha + " - Status: 200 - " + req.url + "\n";
                 fs.writeFile('log.txt', log, {encoding: 'utf8', flag: 'a'}, (error) => {
                     if (error) throw error; 
-                    console.log('The file has been saved!');
+                    console.log('El archivo ha sido guardado!');
                     
                     res.writeHead(200, {'Content-Type': 'text/plain'});
                     res.end(data);
@@ -41,4 +41,6 @@ http.createServer((req, res) => {
 
     }
 
+    console.log("CTRL + C para salir");
+    
 }).listen(8080);

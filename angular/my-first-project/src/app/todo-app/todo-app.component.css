@@ -1,0 +1,28 @@
+.js-done{
+    text-decoration: line-through;
+}
+input{
+    height: 30px;
+    margin: 10px;
+}
+
+button{
+    height: 36px;
+    margin: 10px;
+}
+
+.todo-list-input{
+    background-color: lightgray;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.todo-list-items{
+    background-color: gray;
+    margin: 10px;
+    text-align: center;
+}
+
+.ocultar{
+    display: none;
+}
