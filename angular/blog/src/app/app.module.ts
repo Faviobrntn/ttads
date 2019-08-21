@@ -9,6 +9,8 @@ import { ArticuloComponent } from './articulo/articulo.component';
 import { AppRoutingModule } from './app-routing.module.';
 import { SegundaPaginaComponent } from './segunda-pagina/segunda-pagina.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
     ArticulosComponent,
     ArticuloComponent,
     SegundaPaginaComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    UsuariosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
