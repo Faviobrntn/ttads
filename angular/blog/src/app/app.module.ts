@@ -6,17 +6,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
+import { AppRoutingModule } from './app-routing.module.';
+import { SegundaPaginaComponent } from './segunda-pagina/segunda-pagina.component';
+import { NavegacionComponent } from './navegacion/navegacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticulosComponent,
-    ArticuloComponent
+    ArticuloComponent,
+    SegundaPaginaComponent,
+    NavegacionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

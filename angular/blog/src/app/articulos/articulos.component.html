@@ -21,13 +21,21 @@
 			</div>
 		</div>
 	</div>
-	<div class="card-group mt-2">
-		<articulo *ngFor="let article of articles" [article]="article" (click)="onArticleRowClicked(article)"></articulo>
+	<div class="row">
+		<div class="card-group mt-2 col-4" *ngFor="let article of articles" (click)="onArticleRowClicked(article)">
+			<!-- <articulo *ngFor="let article of articles" [article]="article" (click)="onArticleRowClicked(article)"></articulo> -->
+			<div class="card border-dark mb-3 mx-2 articulos">
+				<div class="card-body text-dark">
+					<h5 class="card-title">{{article.title}}</h5>
+					<p class="card-text text-muted">{{article.description}}</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </main>
 
 
-<main role="main" class="container" *ngIf="selectedArticle !== null">
+<!-- <main role="main" class="container" *ngIf="selectedArticle !== null">
 	<div class="row">
 		<div class="col-md-8 blog-main">
 
@@ -40,7 +48,6 @@
 
 			<nav class="blog-pagination">
 				<a class="btn btn-outline-primary mr-1" href="#" *ngFor="let tag of selectedArticle.tagList">{{tag}}</a>
-				<!-- <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Hardware</a> -->
 			</nav>
 
 		</div>
@@ -54,9 +61,8 @@
 				<p class="mb-0">{{selectedArticle.author.bio}}</p>
 			</div>
 		</aside>
-
 	</div>
-</main>
+</main> -->
 
 
 <footer class="blog-footer">

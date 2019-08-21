@@ -1,7 +1,54 @@
-<div class="card border-dark mb-3 mx-2 articulos" style="width: 22rem; height: 10rem;">
-	<!-- <div class="card-header">{{article.title}}</div> -->
-	<div class="card-body text-dark">
-		<h5 class="card-title">{{article.title}}</h5>
-		<p class="card-text text-muted">{{article.description}}</p>
-	</div>
+<div class="container">
+	<header class="blog-header py-3 my-4">
+		<div class="row flex-nowrap justify-content-between align-items-center">
+			<div class="col-4 pt-1">
+				<a class="btn btn-sm btn-outline-secondary" routerLink="/articulos">Volver</a>
+			</div>
+			<div class="col-4 text-center">
+				<h1 class="blog-header-logo text-dark" href="#">Articulo</h1>
+			</div>
+			<div class="col-4 d-flex justify-content-end align-items-center"></div>
+		</div>
+	</header>
 </div>
+
+<main role="main" class="container" *ngIf="selectedArticle !== null">
+	<div class="row">
+		<div class="col-md-8 blog-main">
+
+			<div class="blog-post">
+				<h2 class="blog-post-title">{{selectedArticle.title}}</h2>
+				<p class="blog-post-meta">{{selectedArticle.fecha}} by 
+					<a href="https://demo.realworld.io/#/@{{selectedArticle.author.username}}" target="_blank">{{selectedArticle.author.username}}</a>
+				</p>
+
+				<p class="text-muted">{{selectedArticle.body}}</p>
+			</div>
+
+			<nav class="blog-pagination">
+				<a class="btn btn-outline-primary mr-1" href="#" *ngFor="let tag of selectedArticle.tagList">{{tag}}</a>
+				<!-- <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Hardware</a> -->
+			</nav>
+
+		</div>
+
+		<aside class="col-md-4 blog-sidebar">
+			<div class="p-4 mb-3 bg-light rounded">
+				<div class="media">
+					<img src="{{selectedArticle.author.image}}" class="mr-3" style="width: 40px; height:40px;"
+						alt="foto de perfil" *ngIf="selectedArticle.author.image !== ''">
+				</div>
+				<h4 class="font-italic">About {{selectedArticle.author.username}}</h4>
+				<p class="mb-0">{{selectedArticle.author.bio}}</p>
+			</div>
+		</aside>
+
+	</div>
+</main>
+
+
+<footer class="blog-footer">
+	<p>Blog template built for <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> by <a
+			href="https://twitter.com/mdo">@mdo</a>.</p>
+	<p><a href="#">Back to top</a></p>
+</footer>

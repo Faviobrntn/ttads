@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'articulos',
@@ -11,7 +12,7 @@ export class ArticulosComponent implements OnInit {
 	articles = [];
 	selectedArticle: any = null;
 	@Input() search = null;
-	constructor(private httpClient: HttpClient) { }
+	constructor(private httpClient: HttpClient, private router: Router) { }
 
 	ngOnInit() {
 		this.loadArticles();
@@ -34,7 +35,8 @@ export class ArticulosComponent implements OnInit {
 				second: 'numeric' 
 			});
 		}
-		this.selectedArticle = article;
+		// this.selectedArticle = article;
+		this.router.navigate(['articulo', article.slug]);
 	}
 	
 	onArticleRowUnclicked() {
