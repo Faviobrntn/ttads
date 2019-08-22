@@ -4,6 +4,8 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { LoginComponent } from './login/login.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosFormularioComponent } from './usuarios-formulario/usuarios-formulario.component';
 
 const routes: Routes = [
     {
@@ -40,6 +42,24 @@ const routes: Routes = [
         path: 'articulo/:id',
         component: ArticuloComponent
     },
+    {
+        path: 'usuarios',
+        component: UsuariosComponent,
+        children: [
+            {
+                path: 'nuevo',
+                component: UsuariosFormularioComponent
+            },
+            {
+                path: 'editar/:id',
+                component: UsuariosFormularioComponent
+            },
+        ]
+    },
+    /* {
+        path: 'usuarios/nuevo',
+        component: UsuariosFormularioComponent
+    }, */
     {
         // REDIRECCION
         path:'**',

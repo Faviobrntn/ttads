@@ -17,24 +17,25 @@
                         <path d="M21 21l-5.2-5.2"></path>
                     </svg>
                 </a>
-                <a class="btn btn-sm btn-outline-secondary" routerLink="/login">Ingresar</a>
+                <a class="btn btn-sm btn-outline-info" routerLink="/login" *ngIf="estaLogeado === false">Ingresar</a>
+                <a class="btn btn-sm btn-outline-danger" routerLink="/login" *ngIf="estaLogeado === true">Salir</a>
             </div>
         </div>
     </header>
     
     
-    <div class="nav-scroller py-1 mb-2">
+    <div class="nav-scroller py-1 mb-2 text-white bg-dark">
         <nav class="nav d-flex justify-content-between">
             <a class="p-2 text-muted" routerLink="">Home</a>
-            <a class="p-2 text-muted" routerLink="/articulos">Articulos</a>
-            <a class="p-2 text-muted" routerLink="/primer-pagina">Primer Pagina</a>
-            <a class="p-2 text-muted" routerLink="/segunda-pagina">Segunda Pagina</a>
-            <a class="p-2 text-muted" routerLink="/usuarios">Usuarios</a>
+            <a class="p-2 text-white" routerLink="/articulos">Articulos</a>
+            <a class="p-2 text-white" routerLink="/usuarios">Usuarios</a>
+            <a class="p-2 text-white" routerLink="/primer-pagina">Primer Pagina</a>
+            <a class="p-2 text-white" routerLink="/segunda-pagina">Segunda Pagina</a>
         </nav>
     </div>
 
 
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <!-- <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
             <h1 class="display-4 font-italic">Ejemplo de blog hecho por mi</h1>
             <p class="lead my-3">
@@ -43,7 +44,7 @@
             </p>
             <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continuar leyendo...</a></p>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <router-outlet></router-outlet>

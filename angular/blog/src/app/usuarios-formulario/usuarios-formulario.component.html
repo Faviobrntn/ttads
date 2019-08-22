@@ -1,0 +1,36 @@
+<main role="main" class="container">
+	<div class="row">
+		<div class="col-md-12 blog-main my-4">
+			<h3 class="pb-4 mb-4 font-italic border-bottom">
+				Usuario
+				<a class="close float-right" routerLink="/usuarios">
+					<span aria-hidden="true">&times;</span>
+				</a>
+			</h3>
+		</div>
+	</div>
+	<div class="row my-4">
+		<div class="col-12">
+			<form>
+				<div class="form-group">
+					<label for="nombre" class="col-form-label">Nombre</label>
+					<input [(ngModel)]="usuario.nombre" type="text" name="nombre" class="form-control" id="nombre">
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-form-label">E-mail</label>
+					<input [(ngModel)]="usuario.email" type="email" name="email" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label for="password" class="col-form-label">Contraseña</label>
+					<input [(ngModel)]="usuario.password" type="password" name="password" class="form-control"
+						id="password">
+				</div>
+			</form>
+		</div>
+		<div class="col-12">
+			<button type="button" class="btn btn-secondary" routerLink="/usuarios">Cancelar</button>
+			<button type="button" class="btn btn-primary float-right" (click)="nuevo()" *ngIf="!usuario.id">Nuevo</button>
+			<button type="button" class="btn btn-primary float-right" (click)="editar()" *ngIf="usuario.id">Guardar</button>
+		</div>
+	</div>
+</main>

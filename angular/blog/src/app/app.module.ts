@@ -11,6 +11,8 @@ import { SegundaPaginaComponent } from './segunda-pagina/segunda-pagina.componen
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
+import { UsuariosFormularioComponent } from './usuarios-formulario/usuarios-formulario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     SegundaPaginaComponent,
     NavegacionComponent,
     UsuariosComponent,
-    LoginComponent
+    LoginComponent,
+    UsuariosFormularioComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

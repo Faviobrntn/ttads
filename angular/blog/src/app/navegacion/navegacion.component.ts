@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'navegacion',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegacionComponent implements OnInit {
 
-  constructor() { }
+	estaLogeado = false;
 
-  ngOnInit() {
-  }
+    constructor(private auth: AuthService) { }
+
+    ngOnInit() {
+		this.estaLogeado = this.auth.estaLogeado;
+
+		console.log(this.auth.estaLogeado);
+		console.log(this.auth.usuario);
+		
+    }
 
 }
