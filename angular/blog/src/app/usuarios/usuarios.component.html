@@ -18,7 +18,7 @@
 						<tr>
 							<td>Nombre</td>
 							<td>Email</td>
-							<td colspan="2" class="text-center">Acciones</td>
+							<td colspan="3" class="text-center">Acciones</td>
 						</tr>
 					</thead>
 
@@ -26,6 +26,9 @@
 						<tr *ngFor="let usuario of getUsuarios()">
 							<td>{{usuario.nombre}}</td>
 							<td>{{usuario.email}}</td>
+							<td class="text-center">
+								<button class="btn btn-sm btn-info" routerLink="/usuarios/detalle/{{usuario.id}}" disabled>Ver</button>
+							</td>
 							<td class="text-center">
 								<button class="btn btn-sm btn-success" routerLink="/usuarios/editar/{{usuario.id}}">Editar</button>
 							</td>

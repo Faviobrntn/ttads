@@ -36,7 +36,7 @@ export class AuthService {
 	}
 
 	delete(id){
-		return delete this.usuarios[(id - 1)];		
+		return this.usuarios.splice((id - 1), 1);		
 	}
 
 	get(id) {

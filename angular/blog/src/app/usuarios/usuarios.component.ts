@@ -10,11 +10,6 @@ import { AuthService } from '../auth.service';
 })
 export class UsuariosComponent implements OnInit {
 
-	// @Input() usuario: any = {
-	// 	nombre: null,
-	// 	email: null,
-	// 	password: null
-    // }
     constructor(
 		private router: Router,
 		private auth: AuthService
@@ -30,6 +25,11 @@ export class UsuariosComponent implements OnInit {
 
 	editar(id){
 		this.router.navigate(['usuarios', 'editar', id]);
+	};
+	
+	
+	detalle(id){
+		this.router.navigate(['usuarios', id]);
 	};
 	
 	borrar(id){		

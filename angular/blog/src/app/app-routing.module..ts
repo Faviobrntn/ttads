@@ -6,6 +6,8 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { LoginComponent } from './login/login.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuariosFormularioComponent } from './usuarios-formulario/usuarios-formulario.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { PrimerPaginaComponent } from './primer-pagina/primer-pagina.component';
 
 const routes: Routes = [
     {
@@ -54,7 +56,15 @@ const routes: Routes = [
                 path: 'editar/:id',
                 component: UsuariosFormularioComponent
             },
+            {
+                path: 'detalle/:id',
+                component: UsuariosFormularioComponent
+            },
         ]
+    },
+    {
+        path: 'primer-pagina',
+        component: PrimerPaginaComponent
     },
     /* {
         path: 'usuarios/nuevo',

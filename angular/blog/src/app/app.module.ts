@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
@@ -13,23 +13,28 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { UsuariosFormularioComponent } from './usuarios-formulario/usuarios-formulario.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { PrimerPaginaComponent } from './primer-pagina/primer-pagina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticulosComponent,
     ArticuloComponent,
+    PrimerPaginaComponent,
     SegundaPaginaComponent,
     NavegacionComponent,
     UsuariosComponent,
     LoginComponent,
-    UsuariosFormularioComponent
+    UsuariosFormularioComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

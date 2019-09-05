@@ -1,0 +1,7 @@
+.ng-invalid{
+    border: 1px solid lightcoral;
+}
+
+.ng-valid{
+    border: 1px solid lightgreen;
+}
